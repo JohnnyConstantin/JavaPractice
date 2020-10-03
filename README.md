@@ -3,9 +3,9 @@ JavaPractice
 Professor - Kirill Alexandrovich 
 
 1 - done at classes
-2 - done at classes and pushed
-3 - 
-4 -
+2 - done at classes
+3 - done at home and pushed
+4 - done at classes and pushed
 5 -
 6 -
 7 -
