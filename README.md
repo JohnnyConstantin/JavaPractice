@@ -6,6 +6,6 @@ Professor - Kirill Alexandrovich
 2 - done at classes
 3 - done at home and pushed
 4 - done at classes and pushed
-5 -
+5 - done at home and pushed
 6 -
 7 -
