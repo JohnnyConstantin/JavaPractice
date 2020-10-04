@@ -1,17 +1,25 @@
 package com.company;
 
 public class Main {
-    public static int main(int n) {
-        // Базовый случай
-        if (n < 10) {
-            return n;
-        }// Шаг рекурсии / рекурсивное условие
-        else {
-            System.out.print(n % 10 + " ");
-            return main(n / 10);
+    public static void recursion(int max, int count) {
+        java.util.Scanner in = new java.util.Scanner(System.in);
+        int n = in.nextInt();
+        if (n > 0) {
+
+            if (n > max) {
+                recursion(n, 1);
+            }
+            else if (n == max) {
+                recursion(max, ++count);
+            }
+            else {
+                recursion(max, count);
+            }
+        } else {
+            System.out.println(count);
         }
     }
     public static void main(String[] args) {
-        System.out.println(main(123)); // вызов рекурсивной функции
+        recursion(0, 0);
     }
 }
