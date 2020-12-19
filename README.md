@@ -7,7 +7,7 @@ Professor - Kirill Alexandrovich
 3 - done at home and pushed
 4 - done at classes and pushed
 5 - done at home and pushed
-6 -
+6 - done at home and pushed
 7 - done at home and pushed
 8 -
 9 -
