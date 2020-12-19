@@ -1,68 +1,58 @@
 package com.company;
 
+import java.io.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void quickSSort(SortingByGPA[] array, int low, int high)
-    {
-        if (array.length == 0)
-            return;//завершить выполнение, если длина массива равна 0
 
-        if (low >= high)
-            return;//завершить выполнение если уже нечего делить
-
-        // выбрать опорный элемент
-        int middle = low + (high - low) / 2;
-        SortingByGPA opora = array[middle];
-
-        // разделить на подмассивы, который больше и меньше опорного элемента
-        int i = low, j = high;
-
-        while (i <= j)
-        {
-            while (array[i].compareTo(opora)==-1)
-                i++;
-
-            while (array[j].compareTo(opora)==1)
-                j--;
-
-            if (i <= j)
-            {
-                SortingByGPA temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-                i++;
-                j--;
-            }
-        }
-
-        if (low < j)
-            quickSSort(array, low, j);
-
-        if (high > i)
-            quickSSort(array, i, high);
-    }
-
-    public static void main(String[] args)
-    {
-        insSort temp=new insSort();
-
+    public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
-        int size=in.nextInt();
-        SortingByGPA[] obj=new SortingByGPA[size];
 
-        for (int i=0; i<size;i++)
+        try(FileWriter writer = new FileWriter("text.txt", false))
         {
-            int GPA=in.nextInt();
-            obj[i]=new SortingByGPA(GPA);
+            String text = in.nextLine();
+            writer.write(text);
+            writer.flush();
+        }
+        catch(IOException ex)
+        {
+            System.out.println(ex.getMessage());
         }
 
-        quickSSort(obj, 0, size-1);
+        try(FileReader reader = new FileReader("text.txt"))
+        {
+            int c;
+            while((c=reader.read())!=-1)
+                System.out.print((char)c);
+        }
+        catch(IOException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
 
-        for (int i=0; i<size; i++)
-            System.out.print(obj[i].getGPA()+" ");
+        System.out.println("");
 
+        try(FileWriter writer = new FileWriter("text.txt", false))
+        {
+            String text = in.nextLine();
+            writer.write(text);
+            writer.flush();
+        }
+        catch(IOException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
 
-        mergeSort fu = new mergeSort();
+        try(FileWriter writer = new FileWriter("text.txt", true))
+        {
+            String text = in.nextLine();
+            writer.write(text);
+            writer.flush();
+        }
+        catch(IOException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+
     }
 }
