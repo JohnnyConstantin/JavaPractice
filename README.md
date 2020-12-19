@@ -11,5 +11,5 @@ Professor - Kirill Alexandrovich
 7 - done at home and pushed
 8 - done at home and pushed
 9 - done at home and pushed
-10 -
-12 - 
+10 - done at home and pushed
+12 - done at home and pushed
